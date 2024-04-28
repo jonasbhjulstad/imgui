@@ -1,6 +1,6 @@
 # Dear ImGui-Vulkan
 
-Minimalistic CMake-configuration of Dear ImGui for Vulkan
+Minimalistic CMake-configuration of Dear ImGui for glfw Vulkan
 
 ## CMake
 

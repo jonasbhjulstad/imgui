@@ -10,10 +10,10 @@ file(GLOB IMGUI_SOURCES source/*.cpp)
 add_library(imgui ${IMGUI_SOURCES})
 
 target_link_libraries(imgui PRIVATE Vulkan::Vulkan)
-set(PROJECT_INCLUDE_DESTINATION include/${PROJECT_NAME}/)
+set(PROJECT_INCLUDE_DESTINATION include/${PROJECT_NAME}-${PROJECT_VERSION})
 target_include_directories(imgui PUBLIC
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
-    $<INSTALL_INTERFACE:${PROJECT_INCLUDE_DESTINATION}>
+    $<INSTALL_INTERFACE:${PROJECT_INCLUDE_DESTINATION}/imgui>
     )
 target_include_directories(imgui PRIVATE
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/imgui>
@@ -28,7 +28,7 @@ packageProject(
   # a temporary directory to create the config files
   BINARY_DIR ${PROJECT_BINARY_DIR}
   # location of the target's public headers
-  INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include
+  INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include/
   # should match the target's INSTALL_INTERFACE include directory
   INCLUDE_DESTINATION ${PROJECT_INCLUDE_DESTINATION}
   # (optional) option to install only header files with matching pattern

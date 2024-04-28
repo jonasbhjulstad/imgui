@@ -37,9 +37,9 @@ packageProject(
   DEPENDENCIES "Vulkan 1.2.162"
   # (optional) create a header containing the version info
   # Note: that the path to headers should be lowercase
-  VERSION_HEADER "${PROJECT_NAME}/version.h"
+  VERSION_HEADER "version.h"
   # (optional) create a export header using GenerateExportHeader module
-  EXPORT_HEADER "${PROJECT_NAME}/export.h"
+  EXPORT_HEADER "export.h"
   # (optional) install your library with a namespace (Note: do NOT add extra '::')
   NAMESPACE ${PROJECT_NAMESPACE}
   # (optional) define the project's version compatibility, defaults to `AnyNewerVersion`
